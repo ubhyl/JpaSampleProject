@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0">
+
+	<persistence-unit name="cstmr1" transaction-type="RESOURCE_LOCAL">
+
+		<provider>org.hibernate.ejb.HibernatePersistence</provider>
+
+		<class>customer.p1.Customer1</class>
+		<exclude-unlisted-classes>true</exclude-unlisted-classes>
+
+		<properties>
+			<property name="hibernate.dialect" value="org.hibernate.dialect.Oracle10gDialect" />
+			<property name="hibernate.connection.driver_class" value="oracle.jdbc.driver.OracleDriver" />
+			<property name="hibernate.connection.url" value="jdbc:oracle:thin:@127.0.0.1:1521:xe" />
+			<property name="hibernate.connection.username" value="system" />
+			<property name="hibernate.connection.password" value="123654" />
+			<property name="hibernate.hbm2ddl.auto" value="update" />
+			<property name="hibernate.show_sql" value="true" />
+			<property name="hibernate.format_sql" value="false" />
+		</properties>
+	</persistence-unit>
+	
+	
+	<persistence-unit name="customer2" transaction-type="RESOURCE_LOCAL">
+		
+		<provider>org.hibernate.ejb.HibernatePersistence</provider>
+		
+		<class>customer.p2.Customer2</class>
+		<exclude-unlisted-classes>true</exclude-unlisted-classes>
+		
+		<properties>
+			<property name="hibernate.dialect" value="org.hibernate.dialect.Oracle10gDialect" />
+			<property name="hibernate.connection.driver_class" value="oracle.jdbc.driver.OracleDriver" />
+			<property name="hibernate.connection.url" value="jdbc:oracle:thin:@127.0.0.1:1521:xe" />
+			<property name="hibernate.connection.username" value="system" />
+			<property name="hibernate.connection.password" value="123654" />
+			<property name="hibernate.hbm2ddl.auto" value="create" />
+			<property name="hibernate.show_sql" value="false" />
+			<property name="hibernate.format_sql" value="true" />
+		</properties>
+	</persistence-unit>
+
+</persistence>
