@@ -2,6 +2,7 @@ package customer.p1;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+//adamım buraya yorum eklıyorum sende bunu sıl ben gorebılcekmıyım bakalımSS
 
 @Entity
 public class Customer1{
